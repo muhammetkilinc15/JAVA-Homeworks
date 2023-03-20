@@ -13,9 +13,7 @@ public class EXC1 {
         int [] arr2 = new int[0];
 
 
-
-
-
+        //sdfs
     }
 
 }
