@@ -1,4 +1,4 @@
---> I created this repository for assignments given at alparslan turkes science and technology university. If you want to take a look, you can
+--> I created this repository for assignments given at Alparslan Türkeş Science and Technology University 
 
 
 
