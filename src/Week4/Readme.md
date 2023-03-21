@@ -1,4 +1,16 @@
 EXC1 
 
-![Screenshot (27)](https://user-images.githubusercontent.com/108901980/226680272-0e9a2248-44ff-4ece-87cc-8c91f84199bb.png)
-![Screenshot (28)](https://user-images.githubusercontent.com/108901980/226680290-42bb8694-763b-4d30-bc11-e69b7150faff.png)
+![Screenshot (27)](https://user-images.githubusercontent.com/108901980/226680455-6ac100ae-b89e-4eb9-9c70-874255d424fa.png)
+
+
+![Screenshot (28)](https://user-images.githubusercontent.com/108901980/226680477-b7867b61-60f2-4a9e-8066-9f14ee5525db.png)
+
+
+
+
+
+
+
+
+
+
