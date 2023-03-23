@@ -51,7 +51,7 @@ public class EXC7 {
                 }
             }
             if (!isFlag) {
-                System.out.println("The world is "+tempWorld+". You missed "+count +" time");
+                System.out.println("The world is "+tempWorld+". You missed "+count+(count > 1 ? " times" :" time"));
                 System.out.println("Do you want to guess another word? Enter y or n> ");
                 exit = scanner.nextLine();
             }
