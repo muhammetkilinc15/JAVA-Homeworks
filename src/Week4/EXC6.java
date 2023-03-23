@@ -13,6 +13,7 @@ public class EXC6 {
         for (int i = 0; i < list1.length; i++) {
             list1[i] = scanner.nextInt();
         }
+
         System.out.print("Enter list2 size and contents: ");
         int[] list2 = new int[scanner.nextInt()];
         for (int i = 0; i < list2.length; i++) {
@@ -25,9 +26,7 @@ public class EXC6 {
         printArray(list2, "list2");
         printArray(merge, "The merge list ");
 
-
     }
-
     // I created this method to short the array
     public static int[] shortArray(int[] array) {
 
