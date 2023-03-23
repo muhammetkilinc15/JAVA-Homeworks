@@ -8,7 +8,6 @@ public class EXC3 {
      (11,13)
      (17,19)
      ...
-
      */
     public static void main(String[] args) {
         System.out.println("Twin primes: ");
