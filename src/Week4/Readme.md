@@ -46,7 +46,7 @@ EXC6
 EXC7
 
 
-![Screenshot (33)](https://user-images.githubusercontent.com/108901980/227769066-301968f2-56da-4e7d-9562-f70337e5319e.png)
+![Screenshot (39)](https://user-images.githubusercontent.com/108901980/227769683-661c4bcb-bbeb-4a07-af53-06f8c92be3fc.png)
 
 
 
