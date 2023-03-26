@@ -10,6 +10,7 @@ public class EXC4 {
      */
     public static void main(String[] args) {
 
+        System.out.println("Emirps numbers: ");
         for (int i = 10,j=0; j <= 120; i++) {
             if (isPrime(i) && isPrime(reversePrimeNumber(i)) && isPolindrome(i, reversePrimeNumber(i))) {
                 System.out.print(i+" ");
