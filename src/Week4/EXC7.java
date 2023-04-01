@@ -5,65 +5,67 @@ import java.util.Scanner;
 
 public class EXC7 {
     /**
-      (Game: hangman) Write a hangman game that randomly generates a word and
-      prompts the user to guess one letter at a time, as presented in the sample run.
-      Each letter in the word is displayed as an asterisk. When the user makes a correct
-      guess, the actual letter is then displayed. When the user finishes a word, display
-      the number of misses and ask the user whether to continue to play with another
-      word. Declare an array to store words, as follows:
-
-      Add any words you wish in this array
-      String[] words = {"write", "that",...}
-
+     * (Game: hangman) Write a hangman game that randomly generates a word and
+     * prompts the user to guess one letter at a time, as presented in the sample run.
+     * Each letter in the word is displayed as an asterisk. When the user makes a correct
+     * guess, the actual letter is then displayed. When the user finishes a word, display
+     * the number of misses and ask the user whether to continue to play with another
+     * word. Declare an array to store words, as follows:
+     * <p>
+     * Add any words you wish in this array
+     * String[] words = {"write", "that",...}
      */
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String usedWorld = "", tempWorld = "", exit = ""; // The used word variable holds the words used,
+        try {
+            boolean isMatch;
+            do {
+                int count = 0; // Count variable is holding wrong number of entries
+                isMatch = false;
 
-        boolean isMatch;
-        do {
-            int count = 0; // Count variable is holding wrong number of entries
-            isMatch = false;
+                String word = getWord();
 
-            String word = getWord();
+                if (!usedWorld.contains(word)) // Prevents repeating the same word from the vocabulary
+                {
+                    usedWorld += word + " ";
+                    tempWorld = word;
+                    word = fillAsteriskWord(word); // randomly selected word is hidden with asterisk
 
-            if (!usedWorld.contains(word)) // Prevents repeating the same word from the vocabulary
-            {
-                usedWorld += word + " ";
-                tempWorld = word;
-                word = fillAsteriskWord(word); // randomly selected word is hidden with asterisk
+                    while (true) {
+                        System.out.print("(Guess) Enter a letter in world " + word + " > ");
+                        char a = scanner.nextLine().charAt(0);
 
-                while (true) {
-                    System.out.print("(Guess) Enter a letter in world " + word + " > ");
-                    char a = scanner.nextLine().charAt(0);
+                        // Checks if the entered letter is in the word
+                        if (!tempWorld.contains(a + "")) {
+                            System.out.println(a + " is not in the world");
+                            count++;
+                        }
 
-                    // Checks if the entered letter is in the word
-                    if (!tempWorld.contains(a + "")) {
-                        System.out.println(a + " is not in the world");
-                        count++;
-                    }
+                        // Checks whether the previously found letter has been re-entered
+                        if (word.contains(a + "")) {
+                            System.out.println(a + " is already in the world");
+                        }
 
-                    // Checks whether the previously found letter has been re-entered
-                    if (word.contains(a + "")) {
-                        System.out.println(a + " is already in the world");
-                    }
+                        word = updateWord(tempWorld, a, word); // Updates word hidden with asterisk
 
-                    word = updateWord(tempWorld, a, word); // Updates word hidden with asterisk
-
-                    if (tempWorld.equals(word)) {
-                        isMatch = true;
-                        break;
+                        if (tempWorld.equals(word)) {
+                            isMatch = true;
+                            break;
+                        }
                     }
                 }
-            }
-            if (isMatch)  // if the word is complete it goes into this statement
-            {
-                System.out.println("The word is " + tempWorld + ". You missed " + count + (count > 1 ? " times" : " time"));
-                System.out.println("Do you want to guess another word? Enter y or n> ");
-                exit = scanner.nextLine();
-            }
-        } while (!exit.equals("n"));
+                if (isMatch)  // if the word is complete it goes into this statement
+                {
+                    System.out.println("The word is " + tempWorld + ". You missed " + count + (count > 1 ? " times" : " time"));
+                    System.out.println("Do you want to guess another word? Enter y or n> ");
+                    exit = scanner.nextLine();
+                }
+            } while (!exit.equals("n"));
+        } catch (Exception e) {
+            System.out.println(e.getClass().getSimpleName());
+        }
     }
 
     // This method checks if the entered letter is in the word.
