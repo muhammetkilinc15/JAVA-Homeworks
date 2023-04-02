@@ -34,6 +34,7 @@ public class EXC7 {
         Fan fan1 = new Fan();
         Fan fan2 = new Fan();
         Fan fan3 = new Fan();
+        Fan fan4= new Fan();
 
         fan1.setSpeed(SLOW);
         fan1.setOn(true);
@@ -42,14 +43,23 @@ public class EXC7 {
 
         System.out.println("\n\n");
 
-        fan2.setSpeed(MEDIUM);
         fan2.setOn(true);
+        fan2.setSpeed(MEDIUM);
         fan2.setRadius(12.45);
         fan2.setColor("Black");
-        System.out.println(fan1.toString());
+        System.out.println(fan2.toString());
+
         System.out.println("\n\n");
 
+        fan3.setOn(true);
+        fan3.setSpeed(FAST);
+        fan3.setRadius(7.12);
+        fan3.setColor("White");
         System.out.println(fan3.toString());
+
+        System.out.println("\n\n");
+
+        System.out.println(fan4.toString());
     }
 }
 class Fan {
@@ -72,18 +82,12 @@ class Fan {
         System.out.println("🔁⚜ Fan Features ⚜🔁\n➖➖➖➖➖➖➖➖➖➖");
         if (isOn()) {
             String speedType = "";
-            switch (getSpeed()) {
-                case 1:
-                    speedType = "SLOW";
-                    break;
-                case 2:
-                    speedType = "MEDIUM";
-                    break;
-                case 3:
-                    speedType = "FAST";
-                default:
-                    speedType = "Unidentified value";
-            }
+            speedType = switch (getSpeed()) {
+                case 1 -> "SLOW";
+                case 2 -> "MEDIUM";
+                case 3 -> "FAST";
+                default -> "Unidentified value";
+            };
             return "* Fan speed: " + speedType + "\n* Radius: " + getRadius() + "\n* Color: " + getColor();
         }
         return "* Radius: " + getRadius() + "\n* Color: " + getColor() + "\n--> Fan is Off ❗❗ ";

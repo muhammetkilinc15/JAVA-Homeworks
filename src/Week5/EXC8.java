@@ -29,7 +29,7 @@ public class EXC8 {
             }
         }
         Location locationMax = locationLargest(arr);
-        System.out.printf("The location of the largest element is %s  at (%d,%d)",locationMax.maxValue,locationMax.row,locationMax.col);
+        System.out.printf("The location of the largest element is %s  at (%d,%d)",locationMax.getMaxValue(),locationMax.row,locationMax.col);
     }
     public static Location locationLargest(double[][] array) {
         return new Location(array);

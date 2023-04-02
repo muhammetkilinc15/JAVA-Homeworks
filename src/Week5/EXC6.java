@@ -17,9 +17,9 @@ public class EXC6 {
      * @param args
      */
     public static void main(String[] args) {
-        int[] arr = new int[10000];
+        int[] arr = new int[100000];
         Random random = new Random();
-        for (int i=0;i<10000;i++){
+        for (int i=0;i<100000;i++){
             arr[i]= random.nextInt(10000);
         }
         StopWatch stopWatch = new StopWatch();

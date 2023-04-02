@@ -23,7 +23,7 @@ public class EXC3 {
                     count++;
                 }
             }
-            System.out.printf("Student %d's correnct count is %d\n",i,count);
+            System.out.printf("Student %d's correct count is %d\n",i,count);
             count=0;
         }
     }

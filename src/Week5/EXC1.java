@@ -7,8 +7,7 @@ public class EXC1 {
     static int[][] matrix = new int[5][5];
 
     public static void main(String[] args) {
-      eightThreePointTwo();
-
+     eightThreePointTwo();
     }
 
     // 8.3--> 1 Initializing arrays with input values.
@@ -54,6 +53,7 @@ public class EXC1 {
                 total += matrix[row][column];
             }
         }
+        System.out.println("Sum of matrix elements: "+total);
     }
 
     // 8.3--> 5 Summing elements by column. For each column, use a variable named total to store its sum.
